@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Widgets/todo_item.dart';
 import 'colors/colors.dart';
 
 
@@ -45,9 +46,11 @@ class Home extends StatelessWidget {
                   child: Text(
                     'All ToDos', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
                   ),
-                )
+                ),
+                ToDoItem(),
               ],
-            ))
+            )
+            )
           ],
         ))
     );
