@@ -30,32 +30,51 @@ class Home extends StatelessWidget {
     return Scaffold(
         backgroundColor: tdBgcolor,
         appBar: _buildAppBar(),
-        body: Container(child : Column(
+        body: Container(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+            child : Column(
           children: [
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.all(0),
-                  prefixIcon: Icon(Icons.search, color: tdBlack, size : 20),
-                  prefixIconConstraints: BoxConstraints(
-                    maxHeight: 20,
-                    minWidth: 25,
+           searchBox(),
+            Expanded(child: ListView(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(
+                    top: 50,
+                    bottom: 20,
                   ),
-                  border: InputBorder.none,
-                  hintText : 'Search',
-                  hintStyle : TextStyle(color: tdGrey)
-
-                ),
-
-              ),
-            )
+                  child: Text(
+                    'All ToDos', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
+                  ),
+                )
+              ],
+            ))
           ],
         ))
+    );
+  }
+
+  Widget searchBox() {
+    return  Container(
+      padding: EdgeInsets.symmetric(horizontal: 15),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+            contentPadding: EdgeInsets.all(0),
+            prefixIcon: Icon(Icons.search, color: tdBlack, size : 20),
+            prefixIconConstraints: BoxConstraints(
+              maxHeight: 20,
+              minWidth: 25,
+            ),
+            border: InputBorder.none,
+            hintText : 'Search',
+            hintStyle : TextStyle(color: tdGrey)
+
+        ),
+
+      ),
     );
   }
 }
