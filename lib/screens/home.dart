@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'Widgets/todo_item.dart';
-import 'colors/colors.dart';
+import '../Widgets/todo_item.dart';
+import '../constants/colors.dart';
+import '../model/ToDo.dart';
+
+
+
+
 
 
 void main() {
@@ -10,6 +15,8 @@ void main() {
 
 class Home extends StatelessWidget {
   const Home({super.key});
+
+  get todoList => null;
 
   AppBar _buildAppBar() {
     return AppBar(
@@ -47,7 +54,14 @@ class Home extends StatelessWidget {
                     'All ToDos', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
                   ),
                 ),
-                ToDoItem(),
+               for ( ToDo todo in todoList)
+
+               /**first todo below is the one we are expecting from the list
+                * second todo is from the widget expecting to do items
+                */
+                 ToDoItem(todo: todo,), //passing todo items to the todo widged
+
+
               ],
             )
             )
