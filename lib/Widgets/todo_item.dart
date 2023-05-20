@@ -12,7 +12,8 @@ class ToDoItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return
+      Container(
       margin: EdgeInsets.only(bottom: 20), // spacing at the bottom
       child: ListTile(
         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 25), //padding for everything in the list tile
