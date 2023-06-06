@@ -17,7 +17,7 @@ class ToDo {
       ToDo(id: "1", todoText: ""),
       ToDo(id: "1", todoText: "House chores",),
       ToDo(id: "1", todoText: "Complete office tasks",),
-      ToDo(id: "1", todoText: "Watch alchemy of souls",),
+      ToDo(id: "1", todoText: "movie",),
 
     ];
   }
