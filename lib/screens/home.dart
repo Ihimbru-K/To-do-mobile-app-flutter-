@@ -8,7 +8,10 @@ import '../model/ToDo.dart';
 class Home extends StatelessWidget {
    Home(Key? key) : super(key:key);
 
-  final todoList = ToDo.todoList();
+  get todoList => null;
+
+  //final todoList = ToDo.todoList();
+
 
   AppBar _buildAppBar() {
     return AppBar(
@@ -44,7 +47,7 @@ class Home extends StatelessWidget {
                           bottom: 20,
                         ),
                         child: Text(
-                          'All ToDos', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
+                          'All ToDos', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                         ),
                       ),
                       for ( ToDo todoo in todoList)
@@ -52,7 +55,7 @@ class Home extends StatelessWidget {
                       /**first todo below is the one we are expecting from the list
                        * second todo is from the widget expecting to do items
                        */
-                        ToDoItem(todo: todoo,), //passing todo items to the todo widged
+                        ToDoItem(todo: todoo,), //passing todo items to the todo widget
 
 
                     ],
@@ -74,12 +77,12 @@ class Home extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                   decoration:  BoxDecoration(
                     color: Colors.white,
-                    boxShadow: [BoxShadow(color: Colors.grey, offset: Offset(0.0,0.0), blurRadius: 10.0, spreadRadius: 0.0),],
+                    boxShadow: const [BoxShadow(color: Colors.grey, offset: Offset(0.0,0.0), blurRadius: 10.0, spreadRadius: 0.0),],
                     borderRadius: BorderRadius.circular(10)
                   ),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Add a new todo item',
+                      hintText: 'Add new todo item',
                       border: InputBorder.none,
                     ),
                   ),
@@ -89,10 +92,10 @@ class Home extends StatelessWidget {
                     bottom : 20,
                     right: 20,
                   ),
-                  child: ElevatedButton( child: Text("+", style: TextStyle(fontSize: 40),),
+                  child: ElevatedButton( child: Text("+", style: TextStyle(fontSize: 40,),),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: tdBlue,
-                      minimumSize: Size(60,60),
+                      minimumSize: const Size(60,60),
                       elevation: 10,
 
                     ),

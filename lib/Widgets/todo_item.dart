@@ -8,7 +8,8 @@ class ToDoItem extends StatelessWidget {
   ToDoItem({Key? key, required this.todo}) : super(key: key);
 
 
-  final todoList = ToDo.todoList();
+ // final todoList = ToDo.todoList();
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class ToDoItem extends StatelessWidget {
           title: Text(todo.todoText!, style: TextStyle(color: tdBlack, decoration: todo.isDone? TextDecoration.lineThrough : null),),
         trailing: Container(
           padding: EdgeInsets.all(0),           //this is the container that contains the delete icon
-          margin:  EdgeInsets.all(12),
+          margin:  EdgeInsets.symmetric(vertical: 12),
           height: 35,
           width: 35,
           decoration: BoxDecoration(
