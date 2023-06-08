@@ -12,12 +12,12 @@ class ToDo {
   static List<ToDo> todoList(){ // a list which returns todo items
     return [
       ToDo(id: "1", todoText: "Work on signup tool", isDone : true),
-      ToDo(id: "1", todoText: "Work on API", isDone : true),
-      ToDo(id: "1", todoText: "Meditate", isDone : true),
-      ToDo(id: "1", todoText: ""),
-      ToDo(id: "1", todoText: "House chores",),
-      ToDo(id: "1", todoText: "Complete office tasks",),
-      ToDo(id: "1", todoText: "movie",),
+      ToDo(id: "2", todoText: "Work on API", isDone : true),
+      ToDo(id: "3", todoText: "Meditate", isDone : true),
+      ToDo(id: "4", todoText: ""),
+      ToDo(id: "5", todoText: "House chores",),
+      ToDo(id: "6", todoText: "Complete office tasks",),
+      ToDo(id: "7", todoText: "movie",),
 
     ];
   }
