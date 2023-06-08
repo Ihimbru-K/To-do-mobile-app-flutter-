@@ -5,7 +5,11 @@ import '../model/ToDo.dart';
 
 class ToDoItem extends StatelessWidget {
   final ToDo todo;  // created todo variable  of type todo
-  ToDoItem({Key? key, required this.todo}) : super(key: key);
+  final onToDoChanged;
+  final onDeleteItem;
+
+
+ const ToDoItem({Key? key, required this.todo, this.onToDoChanged, this.onDeleteItem}) : super(key: key);
 
 
  // final todoList = ToDo.todoList();
@@ -18,7 +22,9 @@ class ToDoItem extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 20), // spacing at the bottom
       child: ListTile(
         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 25), //padding for everything in the list tile
-        onTap: () {},
+        onTap: () {
+          onToDoChanged(todo);
+        },
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
 
@@ -43,7 +49,10 @@ class ToDoItem extends StatelessWidget {
           child: IconButton(
             icon: Icon(Icons.delete),     //This is the delete button, once pressed it deletes a task
             color: Colors.white,
-            iconSize: 18, onPressed: () { print("clicked on delete icon"); },
+            iconSize: 18, onPressed: () {
+              //print("clicked on delete icon");
+            onDeleteItem(todo.id);
+              },
 
           ),
 
