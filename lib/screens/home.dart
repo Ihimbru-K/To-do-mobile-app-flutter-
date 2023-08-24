@@ -152,7 +152,8 @@ class _HomeState extends State<Home> {
 
 void  _deleteToDoItem(String id){
     setState(() {
-      todoList.removeWhere((item) => item.id == id);
+     // todoList.removeWhere((item) => item.id == id);
+      _foundToDo.removeWhere((item) => item.id == id);
     });
 
 }
