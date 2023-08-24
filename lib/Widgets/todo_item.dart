@@ -3,16 +3,19 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../model/ToDo.dart';
 
+
+
+
 class ToDoItem extends StatelessWidget {
   final ToDo todo;  // created todo variable  of type todo
   final onToDoChanged;
   final onDeleteItem;
 
 
- const ToDoItem({Key? key, required this.todo, this.onToDoChanged, this.onDeleteItem}) : super(key: key);
+  ToDoItem({Key? key, required this.todo, this.onToDoChanged, this.onDeleteItem}) : super(key: key);
 
 
- // final todoList = ToDo.todoList();
+ final todoList = ToDo.todoList();
 
 
   @override
